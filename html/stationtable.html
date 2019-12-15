@@ -70,7 +70,7 @@
                 else if(day=="공휴일")
                     document.getElementById("sundayButton").checked = true;
                 document.getElementById("wangeup").setAttribute('value', wangeup);
-                var ListText = loadFile("http://localhost/data/"+getParam("station")+" "+day+".txt").split('\n');
+                var ListText = loadFile("http://milkbottle0305.github.io/subway/data/"+getParam("station")+" "+day+".txt").split('\n');
                 var table_obj = Array();
                 getTextData(table_obj);
             </script>
