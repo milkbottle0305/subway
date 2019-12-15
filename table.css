@@ -1,0 +1,135 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+label{
+    position: relative;
+    bottom: 10px;
+    font-size: 30px;
+    color: #2E2E2E;
+}
+table {
+    width: 100%;
+    border-top: 3px solid #585858;
+}
+th, td{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+th{
+    background-color: #F2F2F2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #BDBDBD;
+}
+td{
+    border-bottom: 1px solid #BDBDBD;
+}
+.TopBar_Flex_Container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+.TopBar_Flex_LineInfo{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    background-color: #0c2461;
+    text-align: center;
+    color: white;
+    border-radius: 100%;
+}
+.TopBar_Flex_Button{
+    position: relative;
+    top: 10px;
+    height: 100px;
+    width: 100px;
+    flex: none;
+    margin-left: auto;
+}
+.Station_info{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    background-color: #0c2461;
+    align-items: center;
+    justify-content: center;
+}
+.Station_info_name{
+    display: flex;
+    position: absolute;
+    width: 40%;
+    height: 120px;
+    background-color: white;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.Station_info_name_text{
+    position: absolute;
+    color: #0c2461;
+    font-size: 50px;
+}
+.ButtonList{
+    padding-top: 30px;
+    width: 100%;
+    height: 100px;
+    background-color: #E6E6E6;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+#weekdayButton{
+    position: relative;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+#saturdayButton{
+    position: relative;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+#sundayButton{
+    position: relative;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+#wangeup{
+    position: relative;
+    left: 260px;
+    top: -10px;
+    width: 120px;
+    height: 80px;
+    font-size: 40px;
+    border:1x solid #525252;    /*---테두리 정의---*/
+    background-color:#c4c4c4;   /*--백그라운드 정의---*/
+    font:30px;      /*--폰트 정의---*/
+    font-weight:bold;   /*--폰트 굵기---*/
+    color:#272727;    /*--폰트 색깔---*/
+}
+.TableUnit{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+.border0{
+    border-spacing: 0;
+}
+#time_col{
+    background-color: #F2F2F2;
+}

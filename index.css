@@ -1,0 +1,60 @@
+/* 전체 배경색 지정 */
+.index-body {
+  background-color: #181f31;
+  margin: 0px;
+}
+
+/* 헤더 부분 */
+.index-header-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+
+.index-main {
+  margin-top: 30px;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box__span {
+  color: #181f31;
+}
+
+.rect-title__span {
+  font-size: 80px;
+}
+
+.rectangular-title-box {
+  color: white;
+  padding: 20px 20px;
+  margin-top: 30px;
+}
+
+.subway-icon-box {
+  color: #3ca3ff;
+  font-size: 100px;
+  margin-top: 30px;
+}
+
+.loading-icon-box {
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.loading-span {
+  font-size: 30px;
+}
+
+.logo-box {
+  color: white;
+  font-size: 80px;
+  margin-top: 40px;
+}

@@ -1,0 +1,58 @@
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+/* 메인 부분 */
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.line-container {
+  min-width: 100vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.station-box-number {
+  width: 5%;
+  height: 30px;
+  background-color: #0c2461;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.station-box-container {
+  width: 10%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.station-box__label {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.station-box {
+  min-width: 125%;
+  display: flex;
+  justify-content: center;
+  background-color: #0c2461;
+}
+
+.station-box .station-box__button {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
