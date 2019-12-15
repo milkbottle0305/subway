@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Project | Table</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/table.css?ver=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+        <script src="../js/urlParameterGet.js?ver=1"></script>
+        <script src="../js/fileInterpret.js?ver=1"></script>
+    </head>
+    <body>
+        <header>
+            <div class="TopBar_Flex_Container">
+                <span class="TopBar_Flex_LineInfo">1</span>
+                <span class="TopBar_Flex_Button">
+                    <a href="main.html">
+                        <i class="fa fa-times fa-6x"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="Station_info">
+                <span class="Station_info_name">
+                    <span class="Station_info_name_text">
+                        <script>
+                            document.write(getParam("station"));
+                            var day = sessionStorage.getItem('bu_day');
+                            var wangeup = sessionStorage.getItem('bu_wangeup');
+                            if(day == null && wangeup == null){
+                                day = "평일";
+                                wangeup = "완행";
+                            }
+                        </script>
+                    </span>
+                </span>
+            </div>
+            <div class="ButtonList">
+                <script>
+                    function hyper_radio(_radio){
+                        day = _radio.value;
+                        sessionStorage.setItem('bu_day', day);
+                        sessionStorage.setItem('bu_wangeup', wangeup);
+                        location.reload();
+                    }
+                    function check(_box){
+                        if(_box.value=="완행"){
+                            _box.value = "급행";
+                            wangeup = "급행";
+                        }
+                        else if(_box.value=="급행"){
+                            _box.value = "완행";
+                            wangeup = "완행";
+                        }
+                        sessionStorage.setItem('bu_day', day);
+                        sessionStorage.setItem('bu_wangeup', wangeup);
+                        location.reload();
+                    }
+                </script>
+                <input type="radio" name="day" value="평일" id="weekdayButton" onclick="hyper_radio(this)" checked="checked"> <label for, id="weekdayButton">평일</label>
+                <input type="radio" name="day" value="토요일" id="saturdayButton" onclick="hyper_radio(this)"> <label for, id="saturdayButton">토요일</label>
+                <input type="radio" name="day" value="공휴일" id="sundayButton" onclick="hyper_radio(this)"> <label for, id="sundayButton">공휴일</label>
+                <input type="button" name="wangeup" value="급행" id="wangeup" onclick="check(this)">
+            </div>
+        </header>
+        <section>
+            <script>
+                if(day=="평일")
+                    document.getElementById("weekdayButton").checked = true;
+                else if(day=="토요일")
+                    document.getElementById("saturdayButton").checked = true;
+                else if(day=="공휴일")
+                    document.getElementById("sundayButton").checked = true;
+                document.getElementById("wangeup").setAttribute('value', wangeup);
+                var ListText = loadFile("http://localhost/data/"+getParam("station")+" "+day+".txt").split('\n');
+                var table_obj = Array();
+                getTextData(table_obj);
+            </script>
+            <div class="TableUnit">
+                <table class="border0">
+                    <thead>
+                        <tr>
+                            <th width=45%>상행</th>
+                            <th width=10%>시간</th>
+                            <th width=45%>하행</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <script>
+                                for(var i = 5; i < 25; i++) {
+                                    document.write("<tr> <td>");
+                                    for(var j = 0; j < table_obj.length; j++) {
+                                        if(table_obj[j]['haeng']=="상행") {
+                                            if(table_obj[j]['wangeup']==wangeup){
+                                                if(Number(table_obj[j]['time'].substr(0,2)) == i) {
+                                                    document.write(table_obj[j]['time'].substr(2,4)+table_obj[j]['arrive']+" ");
+                                                }
+                                            }
+                                        }
+                                    }
+                                    document.write("</td>");
+                                    document.write("<td id='time_col'>"+i+"</td>");
+                                    document.write("<td>");
+                                    for(var j = 0; j < table_obj.length; j++) {
+                                        if(table_obj[j]['haeng']=="하행") {
+                                            if(table_obj[j]['wangeup']==wangeup){
+                                                if(Number(table_obj[j]['time'].substr(0,2)) == i) {
+                                                    document.write(table_obj[j]['time'].substr(2,4)+table_obj[j]['arrive']+" ");
+                                                }
+                                            }
+                                        }
+                                    }
+                                    document.write("</td> </tr>");
+                                }
+                            </script>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </body>
+</html>
