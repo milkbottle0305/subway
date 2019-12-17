@@ -12,10 +12,11 @@ body {
 }
 
 .line-container {
-  min-width: 100vh;
+  width: 95%;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  margin-left: 15px;
 }
 
 .station-box-number {
@@ -27,7 +28,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .station-box-container {
@@ -39,13 +39,16 @@ body {
   flex-direction: column;
 }
 
+.station-box__label-container {
+  margin-top: 10px;
+}
+
 .station-box__label {
-  margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .station-box {
-  min-width: 125%;
+  width: 120%;
   display: flex;
   justify-content: center;
   background-color: #0c2461;
@@ -55,4 +58,8 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 10px;
+}
+
+.text:hover {
+  cursor: pointer;
 }
