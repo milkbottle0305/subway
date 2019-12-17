@@ -1,70 +1,9 @@
+/* text class = span class */
+.text:hover {
+  cursor: pointer;
+}
+
 html {
   width: 3000px;
   height: 2700px;
-}
-
-body {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-top: 5px;
-}
-
-/* 메인 부분 */
-.main {
-  height: 100%;
-  width: 100%;
-}
-
-.line-container {
-  width: 95%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  margin-left: 15px;
-}
-
-.station-box-number {
-  width: 5%;
-  height: 30px;
-  background-color: #0c2461;
-  color: white;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.station-box-container {
-  width: 10%;
-  height: 80px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-
-.station-box__label-container {
-  margin-top: 10px;
-}
-
-.station-box__label {
-  font-size: 12px;
-}
-
-.station-box {
-  width: 120%;
-  display: flex;
-  justify-content: center;
-  background-color: #0c2461;
-}
-
-.station-box .station-box__button {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-}
-
-.text:hover {
-  cursor: pointer;
 }
