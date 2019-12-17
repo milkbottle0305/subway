@@ -88,7 +88,7 @@
           </thead>
           <tbody>
             <script>
-              for(var i = 5; i < 25; i++) {
+              for(var i = 5; i < 24; i++) {
                 document.write("<tr> <td>");
                   for(var j = 0; j < table_obj.length; j++) {
                     if(table_obj[j]['haeng']=="상행") {
@@ -113,6 +113,29 @@
                   }
                   document.write("</td> </tr>");
               }
+                document.write("<tr> <td>");
+                  for(var j = 0; j < table_obj.length; j++) {
+                    if(table_obj[j]['haeng']=="상행") {
+                      if(table_obj[j]['wangeup']==wangeup){
+                        if(Number(table_obj[j]['time'].substr(0,2)) == 0) {
+                          document.write(table_obj[j]['time'].substr(2,4)+table_obj[j]['arrive']+" ");
+                        }
+                      }
+                    }
+                  }
+                  document.write("</td>");
+                  document.write("<td id='time_col'>"+"00"+"</td>");
+                  document.write("<td>");
+                  for(var j = 0; j < table_obj.length; j++) {
+                    if(table_obj[j]['haeng']=="하행") {
+                      if(table_obj[j]['wangeup']==wangeup){
+                        if(Number(table_obj[j]['time'].substr(0,2)) == 0) {
+                          document.write(table_obj[j]['time'].substr(2,4)+table_obj[j]['arrive']+" ");
+                        }
+                      }
+                    }
+                  }
+                  document.write("</td> </tr>");
             </script>
           </tbody>
         </table>
