@@ -2,5 +2,5 @@
 .header-box {
   display: flex;
   justify-content: space-between;
-  min-width: 100vh;
+  width: 100%;
 }
