@@ -1,65 +1,81 @@
-body {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-top: 5px;
-}
-
-/* 메인 부분 */
-.main {
-  height: 100%;
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.line-container {
-  width: 95%;
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 300px;
+  height: 150px;
+  border-radius: 0.5rem;
+  z-index: 5000;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 4000;
+}
+
+.title-box {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  margin-left: 15px;
-}
-
-.station-box-number {
-  width: 5%;
-  height: 30px;
-  background-color: #0c2461;
-  color: white;
-  border-radius: 10px;
-  display: flex;
   justify-content: center;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.station-box-container {
-  width: 10%;
-  height: 80px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-}
-
-.station-box__label-container {
-  margin-top: 10px;
-}
-
-.station-box__label {
-  font-size: 12px;
-}
-
-.station-box {
-  width: 120%;
-  display: flex;
-  justify-content: center;
-  background-color: #0c2461;
-}
-
-.station-box .station-box__button {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-}
-
-.text:hover {
+.submitBtn {
+  width: 120px;
+  height: 48px;
+  border: none;
+  margin-top: 15px;
   cursor: pointer;
+  margin-left: 55px;
+}
+
+.submitBtn:hover {
+  color: #fff;
+  background-color: #216282;
+  opacity: 0.9;
+}
+
+.mainBtn {
+  width: 120px;
+  height: 48px;
+  text-align: center;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.mainBtn:hover {
+  color: #fff;
+  background-color: #216282;
+  opacity: 0.9;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  color: #216182;
 }
