@@ -1,0 +1,9 @@
+/* text class = span class */
+.text:hover {
+  cursor: pointer;
+}
+
+html {
+  width: 3000px;
+  height: 2700px;
+}
